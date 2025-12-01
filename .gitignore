@@ -9,10 +9,6 @@ _out/
 *.mtar
 mta_archives/
 
-# Environment variables
-.env
-.env.local
-
 # IDE
 .vscode/
 .idea/
