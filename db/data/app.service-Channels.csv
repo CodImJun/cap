@@ -1,0 +1,4 @@
+ID,channelId,channelName,autoJoinEnabled,manualJoinEnabled,createdAt,modifiedAt
+1,channel001,일반 채널,true,true,2024-01-01T00:00:00Z,2024-01-01T00:00:00Z
+2,channel002,프리미엄 채널,false,true,2024-01-01T00:00:00Z,2024-01-01T00:00:00Z
+3,channel003,자동가입 채널,true,false,2024-01-01T00:00:00Z,2024-01-01T00:00:00Z

@@ -30,7 +30,12 @@
         "kind": "postgres"
       },
       "auth": {
-        "kind": "xsuaa"
+        "[production]": {
+          "kind": "xsuaa"
+        },
+        "[development]": {
+          "kind": "mocked"
+        }
       }
     },
     "build": {
