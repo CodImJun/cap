@@ -1,5 +1,6 @@
 using { app.service as db } from '../db/schema';
 
+@path: 'account'
 service AccountService {
   
   // 1. 계정 조회
