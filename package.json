@@ -1,0 +1,30 @@
+{
+  "name": "cap",
+  "version": "1.0.0",
+  "description": "SAP CAP + PostgreSQL + Node.js Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "cds-serve",
+    "watch": "cds watch",
+    "deploy": "cds deploy --to postgres",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@sap/cds-dk": "^9.4.3"
+  },
+  "dependencies": {
+    "@sap/cds": "^9.4.4",
+    "express": "^4.21.2",
+    "@cap-js/postgres": "^2"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "postgres"
+      }
+    }
+  }
+}

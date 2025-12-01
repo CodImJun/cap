@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(npx cds:*)",
+      "Bash(echo:*)",
+      "Bash(README.md)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
