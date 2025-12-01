@@ -34,4 +34,18 @@ service AccountService {
   
   // 5. 채널 정보 조회
   entity Channels as projection on db.Channels;
+  
+  // 추가: 계정 활동 로그 조회
+  entity AccountLogs as projection on db.AccountLogs {
+    *,
+    account.accountId as accountId,
+    account.name as accountName
+  };
+  
+  // 추가: 채널 초대 조회
+  entity ChannelInvites as projection on db.ChannelInvites {
+    *,
+    channel.channelName as channelName,
+    invitedBy.name as inviterName
+  };
 }

@@ -1,0 +1,4 @@
+ID,channel_ID,invitedBy_ID,invitedEmail,inviteCode,status,expiresAt,createdAt,modifiedAt
+1,1,1,newuser@example.com,INV-001-ABC,PENDING,2024-12-31T23:59:59Z,2024-01-05T00:00:00Z,2024-01-05T00:00:00Z
+2,2,1,friend@example.com,INV-002-DEF,ACCEPTED,2024-12-31T23:59:59Z,2024-01-06T00:00:00Z,2024-01-07T00:00:00Z
+3,1,2,colleague@example.com,INV-003-GHI,PENDING,2024-12-31T23:59:59Z,2024-01-08T00:00:00Z,2024-01-08T00:00:00Z
