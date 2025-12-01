@@ -51,7 +51,26 @@ npm run watch
 - AdminService: http://localhost:4004/admin/
 - Fiori Launchpad: http://localhost:4004/fiori.html
 
+## SAP BTP 배포
+
+SAP BTP Cloud Foundry 환경에 배포하는 방법은 [DEPLOYMENT.md](./DEPLOYMENT.md) 문서를 참고하세요.
+
+간단 요약:
+```bash
+# 1. MBT 도구 설치
+npm install -g mbt
+
+# 2. 빌드
+npm run build
+mbt build
+
+# 3. CF 로그인 및 배포
+cf login
+cf deploy mta_archives/cap-bookshop_1.0.0.mtar
+```
+
 ## 참고 자료
 - [SAP CAP Documentation](https://cap.cloud.sap/docs/)
 - [CAP PostgreSQL Plugin](https://cap.cloud.sap/docs/guides/databases-postgres)
+- [SAP BTP Deployment Guide](./DEPLOYMENT.md)
 

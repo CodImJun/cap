@@ -1,0 +1,14 @@
+---
+applications:
+  - name: cap-bookshop-srv
+    path: gen/srv
+    buildpack: nodejs_buildpack
+    memory: 256M
+    instances: 1
+    health-check-type: http
+    health-check-http-endpoint: /health
+    services:
+      - cap-bookshop-db
+      - cap-bookshop-uaa
+    env:
+      NODE_ENV: production

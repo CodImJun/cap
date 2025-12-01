@@ -7,6 +7,7 @@
     "start": "cds-serve",
     "watch": "cds watch",
     "deploy": "cds deploy --to postgres",
+    "build": "cds build --production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -17,14 +18,46 @@
   },
   "dependencies": {
     "@sap/cds": "^9.4.4",
+    "@sap/xssec": "^4",
+    "@sap/xsenv": "^5",
     "express": "^4.21.2",
-    "@cap-js/postgres": "^2"
+    "@cap-js/postgres": "^2",
+    "passport": "^0.7.0"
   },
   "cds": {
     "requires": {
       "db": {
         "kind": "postgres"
+      },
+      "auth": {
+        "kind": "xsuaa"
       }
+    },
+    "build": {
+      "target": "gen",
+      "tasks": [
+        {
+          "for": "nodejs",
+          "src": "srv",
+          "options": {
+            "model": [
+              "db",
+              "srv",
+              "app"
+            ]
+          }
+        },
+        {
+          "for": "postgres",
+          "src": "db",
+          "options": {
+            "model": [
+              "db",
+              "srv"
+            ]
+          }
+        }
+      ]
     }
   }
 }
